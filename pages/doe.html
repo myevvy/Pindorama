@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe</title>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <nav id="navegacao"> <!--Navegação-->
+            <div id="card-logo-navegacao">
+                <a href="../index.html">
+                    <img src="#" alt="foto-da-logo">
+                </a>
+            </div>
+            <div id="card-links-navegacao">
+                <a class="links-navegacao" href="doe.html">Doe</a>
+                <a class="links-navegacao" href="a_floresta.html">A Floresta</a>
+                <a class="links-navegacao" href="kids.html">Kids</a>
+                <a class="links-navegacao" href="sobre.html">Sobre</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="principal">
+        <section id="introducao-doe"> <!--Seção de Introdução à Página Doe-->
+            <h1>Doe</h1>
+            <p>Encontre ONGS que também estão preocupados com o futuro da Mata Atlântica.</p>
+        </section>
+
+        <section id="ongs"> <!--Seção de ONGS-->
+            <div id="filtros">
+                <form action="pagina_resultado.php" method="post">
+                    <input type="search" id="busca-nome-causa" name="buscaNC" placeholder="Busque por nome ou causa" img
+                        src="#" alt="foto-da-lupa">
+                    <input type="search" id="busca-cep" name="buscaCEP" placeholder="Busque por CEP" img src="#"
+                        alt="foto-do-icone-de-localizacao">
+                    <button type="button" id="botao-filtro-causa">Causa</button>
+                    <button type="button" id="botao-filtro-estado">Estado</button>
+                </form>
+            </div>
+
+            <div id="titulos-resultados">
+                <h2>Resultados: </h2>
+                <p># ONGS encontradas</p>
+            </div>
+
+            <div id="selecao-proximidade">
+                <form action="pagina_resultado.php" method="post">
+                    <select name="proximidade" id="selecao-proximidade">
+                        <option value="menos-proximo">Sem preferências</option>
+                        <option value="mais-proximo">Mais próximo</option>
+                        <option value="menos-proximo">Mais distante</option>
+                        <option value="menos-proximo">Mais bem avaliada</option>
+                        <option value="menos-proximo">Mais conhecida</option>
+                    </select>
+                </form>
+            </div>
+
+
+            <div id="card-ongs"> <!--Cartões das ONGS-->
+                <div id="ongs-1-2-3">
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+
+
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+
+
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+                </div>
+
+
+                <div id="ongs-4-5-6">
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+
+
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+
+
+                    <article class="perfil-ong">
+                        <p class="classificacao">Restauração</p>
+                        <p class="distancia"># km</p>
+                        <img class="foto-ong" src="#" alt="foto-da-ONG">
+                        <h3 class="nome-ong">Nome da ONG</h3>
+                        <p class="descricao-ong">Breve descrição da ONG</p>
+                        <button class="botao-ong">Saiba mais</button>
+                    </article>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="rodape"> <!--Seção do Rodapé-->
+        <div id="card-links">
+            <div class="links-rodape">
+                <a href="#">Doe</a>
+            </div>
+
+
+            <div class="links-rodape">
+                <a href="#">A Floresta</a>
+            </div>
+
+
+            <div class="links-rodape">
+                <a href="#">Kids</a>
+            </div>
+
+
+            <div class="links-rodape">
+                <a href="#">Sobre Nós</a>
+            </div>
+        </div>
+
+        <img src="#" alt="foto-da-logo">
+    </footer>
+
+</body>
+
+</html>
+
