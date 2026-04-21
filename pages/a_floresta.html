@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Floresta</title>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <nav id="navegacao"> <!--Navegação-->
+            <div id="card-logo-navegacao">
+              <a href="../index.html">
+                <img src="../assets/images/logos/logo_escura.svg" alt="foto-da-logo">
+              </a>
+            </div>
+
+            <div id="card-links-navegacao">
+              <a class="links-navegacao" href="doe.html">Doe</a>
+              <a class="links-navegacao" href="a_floresta.html">A Floresta</a>
+              <a class="links-navegacao" href="kids.html">Kids</a>
+              <a class="links-navegacao" href="sobre.html">Sobre</a>
+            </div>
+        </nav>
+    </header> 
+    <main id="principal"> 
+        <section id="home">
+         <div id="titulo">
+           <h1 id="titulo-principal">A floresta</h1> 
+           <p id="subtitulo-topo">Descubra mais sobre a biodiversidade</p> 
+           <form action="pagina_resultado.php" id="pesquisa">
+              <input type="search" name="pesquisaTexto" id="pesquisa_texto" placeholder="Pesquisar textos">
+           </form>
+        </section> 
+        
+    <section id="todos-os-textos"> 
+        <div #botoes-filtro>
+            <button class="filtros" onclick="">Todos</button>
+            <button class="filtros" onclick="">Fauna</button>
+            <button class="filtros" onclick="">Flora</button>
+            <button class="filtros" onclick="">Rios</button>
+        </div>
+
+        <div id="texto-resultados">
+            <h2 id="resultados">RESULTADOS: # textos encontrados</p>
+            <form action="">
+                <select name="slecione-recentes" id="selecione-recentes">
+                    <option value="selecione-uma-opcao">Selecione uma opção</option>
+                    <option value="mais-recente">Mais recente</option>
+                    <option value="mais-antigo">Mais antigo</option>
+                </select>
+            </form>
+        </div>
+
+       <div class="blocos-textos"> 
+            <article class="blocos">
+              <p class="classificacao-fauna">Fauna</p>
+              <h4 class="titulos-blocos">Entenda mais sobre a fauna</h4>
+              <p class="textinhos">Descubra mais sobre a fauna da Mata Atlântica</p>
+              <a class="noticias" href="paginas_textos/fauna.html">Saiba mais</a> 
+           </article>
+
+            <article class="blocos"> 
+              <p class="classificacao-fauna">Fauna</p> 
+             <h4 class="titulos-blocos">Entenda mais sobre a situação dos animais da Mata Atlântica</h4>  
+             <p class="textinhos">Fome piora situação da onça pintada na Mata Atlântica</p>
+             <a class="noticias" href="https://www.estadao.com.br/sustentabilidade/instituto-ja-recuperou-mais-de-600-hectares-da-mata-atlantica-com-tecnologia-e-parcerias/">Saiba mais</a>
+           </article> 
+
+          <article class="blocos"> 
+             <p class="classificacao-fauna">Fauna</p>
+             <h4 class="titulos-blocos">Veja a situação dos animais da Mata Atlântica</h4> 
+             <p class="textinhos">Descubra mais sobre a fauna diversa da Mata Atlântica</p>
+             <a class="noticias"  href="https://www.campograndenews.com.br/meio-ambiente/mais-de-60-especies-da-fauna-sul-mato-grossense-estao-em-risco-de-extincaofauna.html">Saiba mais</a>
+          </article>
+       </div>
+
+       <div class="blocos-textos"> 
+          <article class="blocos"> 
+             <p class="classificacao-flora">Flora</p>
+             <h4 class="titulos-blocos">Leia mais sobre a flora!</h4> 
+             <p class="textinhos">Veja mais sobre a flora riquíssima da Mata Atlântica</p>
+             <a class="noticias" href="paginas_textos/flora.html">Descubra mais sobre a flora da Mata Atlântica</a> 
+          </article>
+
+         <article class="blocos"> 
+             <p class="classificacao-flora">Flora</p> 
+             <h4 class="titulos-blocos">Recuperação da floresta</h4>
+             <p class="textinhos">A Mata Atlântica ainda pode ser salva </p>
+             <a class="noticias"  href="https://www.sosma.org.br/noticias/extincao-arvores-mata-atlantica">Saiba mais</a>
+         </article> 
+        
+                   
+         <article class="blocos">
+             <p class="classificacao-flora">Flora</p> 
+             <h4 class="titulos-blocos">Saiba mais</h4> 
+             <p class="textinhos">Maioria das espécies de animais em extinção pertencem a Mata Atlântica</p> 
+             <a class="noticias" href="https://www.campograndenews.com.br/meio-ambiente/mais-de-60-especies-da-fauna-sul-mato-grossense-estao-em-risco-de-extincao"> Saiba mais</a>
+         </article>
+        </div>  
+
+       <div class="blocos-textos"> 
+          <article class="blocos"> 
+             <p class="classificacao-rios">Rios e lagos</p> 
+             <h4 class="titulos-blocos">Saiba mais sobre a recuperação</h4>
+             <p class="textinhos">Entenda melhor sobre a situação hidríca da Mata Atlântica</p>
+             <a class="noticias" href="paginas_textos/hidro.html">Saiba mais</a>
+          </article> 
+
+          <article class="blocos"> 
+             <p class="classificacao-rios">Rios</p>
+             <h4 class="titulos-blocos">Situação dos rios</h4>  
+             <p class="textinhos">Rios da Mata Atlântica se tornam impróprios</p> 
+             <a class="noticias" href="https://g1.globo.com/sp/sorocaba-jundiai/noticia/2024/03/21/60percent-dos-rios-da-mata-atlantica-nao-tem-agua-boa-aponta-estudo-veja-mapa.ghtml">Saiba mais</a>
+         </article>
+    
+          <article class="blocos">
+             <p class="classificacao-rios">Rios</p>  
+             <h4 class="titulos-blocos">Relatório expõe piora na qualidade da água</h4> 
+             <p class="textinhos">Entenda mais sobre a situação crítica das águas da Mata Atlântica</p> 
+             <a class="noticias" href="https://www.campograndenews.com.br/meio-ambiente/relatorio-expoe-agua-ruim-em-rios-de-ms-sob-pressao-de-esgoto-e-desmate">Saiba mais</a>
+          </article>
+       </div>    
+        
+    </section>      
+    </main>
+
+     <!--Tudo ok com o footer-->
+     <footer id="rodape"> <!--Seção do Rodapé-->
+        <div id="card-links">
+            <div class="links-rodape">
+                <a href="doe.html">Doe</a>
+            </div>
+               
+            <div class="links-rodape">
+                <a href="a_floresta.html">A Floresta</a>
+            </div>
+
+            <div class="links-rodape">
+                <a href="kids.html">Kids</a>
+            </div>
+
+            <div class="links-rodape">
+                <a href="#">Sobre Nós</a>
+            </div>
+        </div>
+
+        <img src="../assets/images/logos/logo_clara.svg" alt="foto-da-logo">
+    </footer>
+    
+
+</body>
+</html>
