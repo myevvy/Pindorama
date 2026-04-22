@@ -28,7 +28,7 @@
               <a class="links-navegacao" href="pages/doe.html">Doe</a>
               <a class="links-navegacao" href="pages/a_floresta.html">A Floresta</a>
               <a class="links-navegacao" href="pages/kids.html">Kids</a>
-              <a class="links-navegacao" href="#">Sobre</a>
+              <button class="links-navegacao" onclick="" id="sobre-nos-nav"></button>
             </div>
         </nav>
     </header>
@@ -37,6 +37,8 @@
 
         <section id="introducao"> <!--Seção de Introdução ao Site-->
           <div id="card-introducao">
+            <h1 id="titulo-home">Pindorama</h1>
+            <p id="subtitulo-home">Restaurando e preservando um bioma rico em diversidade, beleza e cultura</p>
           </div>
         </section>
     
@@ -47,10 +49,10 @@
            <div id="card-noticias"> 
               <div id="card-principal"> <!--Noticia Principal-->
                   <article id="noticia-principal">
-                    <p>Riscos de Extinção</p>
-                    <h3>Os medos que os cientistas enfrentam com as drasticas mudanças climáticas.</h3>
-                    <a href="#">Ler mais -></a>
-                    <img src="#" alt="foto-da-noticia">
+                    <p id="classificacao-texto">Fauna</p>
+                    <h3 id="titulo-do-texto">Veja a situação dos animais da Mata Atlântica</h3>
+                    <a id="botão-para-o-texto" href="https://www.campograndenews.com.br/meio-ambiente/mais-de-60-especies-da-fauna-sul-mato-grossense-estao-em-risco-de-extincaofauna.html">Ler mais</a>
+                    <img id="foto-do-texto" src="assets/images/" alt="foto-da-noticia">
                   </article>
                 </div>
             </div>
@@ -88,44 +90,30 @@
         <section id="doe"> <!--Seção de Doação-->
             <div id="card-doe">
                 <div id="doe-textos">
-                    <h2>Doe</h3>
-                    <p>Conheça ONG's perto de você e as ajude!</p>
-                    <button>
-                        <a href="#">Conhecer</a>
-                    </button>
+                    <h2 id="titulo-doe">Doe</h2>
+                    <p id="texto-doe">Conheça ONG's perto de você e as ajude!</p>
+                    <a id="botao-doe" href="pages/doe.html">Conhecer</a>
                 </div>
 
-                <img src="#" alt="foto-do-card-doe">
+                <img id="imagem-doe" src="assets/images/doe/imgDoeHome.jpg" alt="foto-do-card-doe">
 
             </div>
         </section>
 
         <section id="sobre-nos"> <!--Seção Sobre Nós-->
-            <h2>Sobre Nós</h2>
-            <p>Texto sobre nós</p>
+            <h2 id="titulo-sobre-nos">Sobre Nós</h2>
+            <p id="texto-sobre-nos"></p>
         </section>
     </main>
 
     <footer id="rodape"> <!--Seção do Rodapé-->
         <div id="card-links">
-            <div class="links-rodape">
-                <a href="pages/doe.html">Doe</a>
-            </div>
-
-            <div class="links-rodape">
-                <a href="pages/a_floresta.html">A Floresta</a>
-            </div>
-
-            <div class="links-rodape">
-                <a href="pages/kids.html">Kids</a>
-            </div>
-
-            <div class="links-rodape">
-                <a href="#">Sobre Nós</a>
-            </div>
-        </div>
-
-        <img src="assets/images/logos/logo_clara.svg" alt="foto-da-logo">
+            <a class="links-rodape" href="index.html">Home</a></li>
+            <a class="links-rodape" href="pages/doe.html">Doe</a></li>
+            <a class="links-rodape" href="pages/a_floresta.html">A floresta</a></li>
+            <a class="links-rodape" href="pages/kids.html">Kids</a></li>
+            <button class="links-rodape" onclick="" id="sobre-nos-rod">Sobre nós</button>
+            <img src="assets/images/logos/logo_clara.svg" alt="foto-da-logo">
     </footer>
 
 </body>

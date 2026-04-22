@@ -11,5 +11,6 @@ Pindorama - Site para conscientização sobre a Mata Atlântica
  * Evelyn Aquiles - [@myevvy](https://github.com/myevvy)
  * Martha Antonia - [@marthaaribeiro](https://github.com/marthaaribeiro)
  * Pedro Elias - [@gowkiilu4](https://github.com/gowkiilu4)
- * Sofia Viana - 
+ * Sofia Viana - [@vitorinosofia](https://github.com/vitorinosofia)
  * Camila Alemi - [@CamilaAlemi](https://github.com/CamilaAlemi)
+ * Isadora Soler -

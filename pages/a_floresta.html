@@ -28,7 +28,7 @@
               <a class="links-navegacao" href="doe.html">Doe</a>
               <a class="links-navegacao" href="a_floresta.html">A Floresta</a>
               <a class="links-navegacao" href="kids.html">Kids</a>
-              <a class="links-navegacao" href="sobre.html">Sobre</a>
+              <button class="links-navegacao" onclick="" id="botao-sobre-nos-nav">Sobre Nós</button>
             </div>
         </nav>
     </header> 
@@ -54,9 +54,9 @@
             <h2 id="resultados">RESULTADOS: # textos encontrados</p>
             <form action="">
                 <select name="slecione-recentes" id="selecione-recentes">
-                    <option value="selecione-uma-opcao">Selecione uma opção</option>
-                    <option value="mais-recente">Mais recente</option>
-                    <option value="mais-antigo">Mais antigo</option>
+                    <option class="opcoes-recentes" value="selecione-uma-opcao">Selecione uma opção</option>
+                    <option class="opcoes-recentes value="mais-recente">Mais recente</option>
+                    <option class="opcoes-recentes value="mais-antigo">Mais antigo</option>
                 </select>
             </form>
         </div>
@@ -134,27 +134,14 @@
     </section>      
     </main>
 
-     <!--Tudo ok com o footer-->
-     <footer id="rodape"> <!--Seção do Rodapé-->
+    <footer id="rodape"> <!--Seção do Rodapé-->
         <div id="card-links">
-            <div class="links-rodape">
-                <a href="doe.html">Doe</a>
-            </div>
-               
-            <div class="links-rodape">
-                <a href="a_floresta.html">A Floresta</a>
-            </div>
-
-            <div class="links-rodape">
-                <a href="kids.html">Kids</a>
-            </div>
-
-            <div class="links-rodape">
-                <a href="#">Sobre Nós</a>
-            </div>
-        </div>
-
-        <img src="../assets/images/logos/logo_clara.svg" alt="foto-da-logo">
+            <a class="links-rodape" href="../index.html">Home</a></li>
+            <a class="links-rodape" href="doe.html">Doe</a></li>
+            <a class="links-rodape" href="a_floresta.html">A floresta</a></li>
+            <a class="links-rodape" href="kids.html">Kids</a></li>
+            <button class="links-rodape" onclick="" id="sobre-nos-rod">Sobre nós</button>
+            <img src="../assets/images/logos/logo_clara.svg" alt="foto-da-logo">
     </footer>
     
 
