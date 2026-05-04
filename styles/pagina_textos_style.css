@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+}
+#navegacao {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.34);
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+/* Logo*/ 
+
+#card-logo-navegacao{
+    position: absolute;
+    left: 60px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#card-logo-navegacao img{
+    width: auto;
+    height: 80px;
+    display: block;
+    transform: translateY(-9px);
+}
+
+#card-links-navegacao {
+    display: flex;
+    gap: 140px;
+    margin: 0 auto;
+}
+
+.links-navegacao {
+    text-decoration: none;
+    color: #313F12;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+
+#principal {
+    margin: 100px;
+    font-family: "Poppins", sans-serif;
+}
+
+#principal #botao-voltar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#principal #botao-voltar a img {
+    width: 15px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+#principal #botao-voltar a {
+    font-size: large;
+    font-weight: bold;
+    color: #5B6F2E;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
