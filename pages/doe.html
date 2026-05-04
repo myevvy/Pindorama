@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doe</title>
+    <!--Plugin de Acessibilidade-->
+    <script>(function (d) {
+            var s = d.createElement("script");
+            /* Posiciona no canto inferior direito */
+            s.setAttribute("data-position", 3);
+            /* Sobe o botão em 100 pixels para não cobrir o VLibras */
+            s.setAttribute("data-offset-v", 100);
+            /* Afasta 20 pixels da lateral */
+            s.setAttribute("data-offset-h", 20);
+            /* Define o tamanho pequeno para ser mais discreto no layout */
+            s.setAttribute("data-size", "small");
+            /* Identificador da sua conta (vqbRwJTpeC) extraído da sua imagem */
+            s.setAttribute("data-account", "vqbRwJTpeC");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.head || d.body).appendChild(s);
+        })(document);
+    </script>
     <!--CSS-->
     <link rel="stylesheet" href="#">
     <!--Poppins-->
@@ -27,7 +44,7 @@
                 <a class="links-navegacao" href="doe.html">Doe</a>
                 <a class="links-navegacao" href="a_floresta.html">A Floresta</a>
                 <a class="links-navegacao" href="kids.html">Kids</a>
-                <button class="links-navegacao" onclick="" id="botao-sobre-nos-nav">Sobre Nós</button>
+                <a class="links-rodape" href="../index.html#sobre-nos">Sobre Nós</a>
             </div>
         </nav>
     </header>
@@ -138,6 +155,17 @@
         </section>
     </main>
 
+     <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 
 <footer id="rodape"> <!--Seção do Rodapé-->
         <div id="card-links">
@@ -145,7 +173,7 @@
             <a class="links-rodape" href="doe.html">Doe</a></li>
             <a class="links-rodape" href="a_floresta.html">A floresta</a></li>
             <a class="links-rodape" href="kids.html">Kids</a></li>
-            <button class="links-rodape" onclick="" id="sobre-nos-rod">Sobre nós</button>
+            <a class="links-rodape" href="../index.html#sobre-nos">Sobre Nós</a>
             <img src="../assets/images/logos/logo_clara.svg" alt="foto-da-logo">
     </footer>
 

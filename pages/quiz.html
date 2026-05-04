@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids</title>
+    <title>Quiz</title>
     <!--Plugin de Acessibilidade-->
     <script>(function (d) {
             var s = d.createElement("script");
@@ -49,66 +49,52 @@
             </div>
         </nav>
     </header>
-    <main id="principal"> <!--Conteúdo Principal-->
-        <section id="introducao-kids"> <!--Seção de introdução á Página-->
-           <div id="card-titulo-kids">
-              <h1 id="titulo-kids">KIDS</h1>
-              <p id="subtitulo-kids">Que tal aprender e se divertir ao mesmo tempo?</p>
-           </div>
 
-        </section>
+    <main id="principal">
+        <section id="quiz">
+            <div id="titulo-e-icones">
+                <a href="kids.html">
+                    <img src="../assets/images/icones/btVoltarKids_ICON.png" alt="icone-voltar">
+                </a>
+                <h1 id="titulo-quiz">Quiz</h1>
+                <button id="botao-som">
+                    <img src="../assets/images/icones/BTSomKids_ICON.png" alt="icone-som">
+                </button>
+            </div>
 
-        <section id="videos-kids"> <!--Seção Videos-->
-           <div id="card-titulo-videos">
-              <h2 id="espaco-titulo-videos-kids">Descubra sobre a Mata Atlântica!</h2> 
-           </div>
+            <div id="conteudo-quiz">
+                <input type="range" name="progrecao" id="progrecao" min="0" max="5" value="1" disabled>
+                <p id="numero-pergunta">Pergunta tal</p>
+                <p id="texto-pergunta">Texto da Pergunta</p>
 
-           <div id="card-video-kids">
-              <article class="bloco-video">
-                <video class="video-kids" src="#" alt="video-um"></video>
-                <h3>Conhecendo a Mata Atlântica</h3>
-                <p>minutos</p>
-              </article>
+                <div id="alternativas">
+                    <article class="alterantivas-quiz">
+                        <img src="#" alt="imagem 1">
+                        <p id="texto-alternativa-1">texto alternativa</p>
+                    </article>
 
-               <article class="bloco-video">
-                <video class="video-kids" src="#" alt="video-dois"></video>
-                <h3>Como ajudar o bioma</h3>
-                <p>minutos</p>
-              </article>
-           </div>
-        </section>
+                     <article class="alterantivas-quiz">
+                        <img src="#" alt="imagem 2">
+                        <p id="texto-alternativa-2">texto alternativa</p>
+                    </article>
 
-        <section id="jogo-kids"> <!--Seção Jogo-->
-          <div id="card-titulo-jogo-kids">
-            <h2 id="titulo-jogo-kids">JOGO</h2>
-            <p id="subtitulo-jogo-kids">Aprenda mais sobre a floresta de forma lúdica!</p>
-          </div>
-          <div id="card-quiz-kids">
-                   <div id="imagem-quiz-kids">
-                      <img src="../assets/images/quiz/QuizKids.jpg" alt="foto-do-quiz">
-                   </div>
-                   <div id="cards-textos-quiz-kids">
-                     <h3 id="titulo-quiz-kids">Quiz</h3>
-                     <p id="subtitulo-quiz-kids">
-                        Descubra seu nível de conhecimento sobre a Mata Atlântica!</p>
-                     <a href="quiz.html">Jogar</a> 
-                    </div>
-         </div>  
+                     <article class="alterantivas-quiz">
+                        <img src="#" alt="imagem 3">
+                        <p id="texto-alternativa-3">texto alternativa</p>
+                    </article>
+
+                     <article class="alterantivas-quiz">
+                        <img src="#" alt="imagem 4">
+                        <p id="texto-alternativa-4">texto alternativa</p>
+                    </article>
+                </div>
+
+                <button type="button" id="botao-avancar">Avançar</button>
+            </div>
+            
         </section>
     </main>
-
-     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-
+    
     <footer id="rodape"> <!--Seção do Rodapé-->
         <div id="card-links">
             <a class="links-rodape" href="../index.html">Home</a></li>
@@ -118,5 +104,7 @@
             <a class="links-rodape" href="../index.html#sobre-nos">Sobre Nós</a>
             <img src="../assets/images/logos/logo_clara.svg" alt="foto-da-logo">
     </footer>
+
+
 </body>
 </html>
