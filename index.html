@@ -21,6 +21,8 @@
             (d.head || d.body).appendChild(s);
         })(document);
     </script>
+    <!--icone-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/logo_escura.svg">
     <!--CSS-->
     <link rel="stylesheet" href="styles/pagina_inicial_style.css">
     <!--Poppins-->
@@ -37,7 +39,7 @@
         <nav id="navegacao"> <!--Navegação-->
             <div id="card-logo-navegacao">
               <a href="index.html">
-                <img src="assets/images/logos/logo_escura.svg" alt="foto-da-logo">
+                <img src="assets/images/logos/logo_clara.svg" alt="foto-da-logo">
               </a>
             </div>
 
@@ -45,7 +47,7 @@
               <a class="links-navegacao" href="pages/doe.html">Doe</a>
               <a class="links-navegacao" href="pages/a_floresta.html">A Floresta</a>
               <a class="links-navegacao" href="pages/kids.html">Kids</a>
-              <a class="links-rodape" href="#sobre-nos">Sobre Nós</a>
+              <a class="links-navegacao" href="#sobre-nos">Sobre Nós</a>
             </div>
         </nav>
     </header>
@@ -55,12 +57,12 @@
         <section id="introducao"> <!--Seção de Introdução ao Site-->
           <div id="card-introducao">
             <h1 id="titulo-home">Pindorama</h1>
-            <p id="subtitulo-home">Restaurando e preservando um bioma rico em diversidade, beleza e cultura</p>
+            <p id="subtitulo-home">Restaurando e preservando um bioma rico em diversidade, beleza e cultura.</p>
           </div>
         </section>
     
 
-        <section id="ultimos-textos"> <!--Seção de Notícias-->
+        <section id="ultimos-textos" class="reveal"> <!--Seção de Notícias-->
           <h2>Últimos Textos</h2>
 
            <div id="card-noticias"> 
@@ -104,10 +106,10 @@
             
         </section>
 
-        <section id="doe"> <!--Seção de Doação-->
+        <section id="doe" class="reveal"> <!--Seção de Doação-->
             <div id="card-doe">
                 <div id="doe-textos">
-                    <h2 id="titulo-doe">Doe</h2>
+                    <h2 id="titulo-doe">DOE</h2>
                     <p id="texto-doe">Conheça ONG's perto de você e as ajude!</p>
                     <a id="botao-doe" href="pages/doe.html">Conhecer</a>
                 </div>
@@ -117,7 +119,7 @@
             </div>
         </section>
 
-        <section id="sobre-nos"> <!--Seção Sobre Nós-->
+        <section id="sobre-nos" class="reveal"> <!--Seção Sobre Nós-->
             <h2 id="titulo-sobre-nos">Sobre Nós</h2>
             <p id="texto-sobre-nos">O projeto Pindorama foi criado com a intenção de aumentar a conscientização sobre a situação da Mata Atlântica. Há mais de um século a floresta vêm sendo degradada por diversos fatores, como a poluição, de rios, lagos e bacias hidrográficas, caça ilegal e desmatamento desenfreado. Devido a tamanha importância da Mata Atlântica na nossa vida, o projeto Pindorama visa divulgar ONGs que trabalham na recuperação da fauna, flora e parte hidrográfica do bioma.</p>
         </section>
@@ -134,7 +136,7 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <footer id="rodape"> <!--Seção do Rodapé-->
+    <footer id="rodape" class ="reveal"> <!--Seção do Rodapé-->
         <div id="card-links">
             <a class="links-rodape" href="index.html">Home</a></li>
             <a class="links-rodape" href="pages/doe.html">Doe</a></li>
@@ -145,6 +147,21 @@
         </div>
         <p>&copy; 2026 Pindorama Todos os direitos reservados.</p>
     </footer>
+<script>
+    
+        <!-- ================== SCRIPT SCROLL ================== -->
+const elements = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
+        if (top < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
+
+</script>
 </body>
 </html>
