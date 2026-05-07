@@ -1,25 +1,28 @@
-body{
+None selected Skip to content Using Gmail with screen readers Enable desktop notifications for Gmail. OK No thanks Conversations Kids Inbox Evelyn Aquiles <evelynaquiles22@gmail.com> 2:16 PM (2 minutes ago) to me body {
+    margin: 0;
     width: 100%;
-    height: 100%;
-    background: var(--cor-base, #f9fdf3);
-    
+    min-height: 100vh;
+    background: var(--Cor-base, #F9FDF3);
+    font-family: 'Poppins', sans-serif;
 }
 
 #navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.34);
     align-items: center;
     padding: 15px 30px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.10);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.747);
+    box-shadow: 0 4px 4px 0 rgba(252, 241, 241, 0.1);
+    box-sizing: border-box;
 }
 
-/* Logo*/ 
-
-#card-logo-navegacao{
+#card-logo-navegacao {
     position: absolute;
     left: 60px;
     display: flex;
@@ -27,7 +30,7 @@ body{
     align-items: center;
 }
 
-#card-logo-navegacao img{
+#card-logo-navegacao img {
     width: auto;
     height: 80px;
     display: block;
@@ -44,7 +47,6 @@ body{
     text-decoration: none;
     color: #313F12;
     font-weight: 500;
-    font-family: "Poppins", sans-serif;
     line-height: normal;
     background: none;
     border: none;
@@ -59,17 +61,17 @@ body{
     background-repeat: no-repeat;
     background-color: lightgray;
     width: 100%;
-    height: 700px;
-    margin-top: -80px;
+    height: 830px;
+    margin-top: 0px;
     padding-top: 120px;
-    z-index: 1 ;
+    z-index: 1;
+    box-sizing: border-box;
 }
 
 #introducao-kids h1 {
     margin-top: 140px;
     margin-bottom: 10px;
     font-size: 50px;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 3px;
@@ -79,15 +81,401 @@ body{
 }
 
 #introducao-kids p {
-    height: 91px;
-    line-height: 100%;
     font-size: 24px;
-    font-style: normal;
     font-weight: 420;
     line-height: normal;
-    letter-spacing: undefined;
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
     color: #313F12;
     font-family: 'Poppins', sans-serif;
+}
+
+/* ===== SEÇÃO DOS VÍDEOS ===== */
+
+#videos-kids {
+    padding: 60px 5%;
+    background: var(--cor-base, #f9fdf3);
+}
+
+#card-titulo-videos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#espaco-titulo-videos-kids {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #5B6F2E;
+}
+
+#card-video-kids {
+    display: flex;
+    justify-content: center;
+    gap: clamp(24px, 5%, 160px);
+    flex-wrap: wrap;
+}
+
+.bloco-video {
+    background: #f9fdf3;
+    border: 4px solid #7a9a4a;
+    border-radius: 16px;
+    width: clamp(280px, 45%, 500px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.video-kids {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16/9;
+    background-color: #e8f0d8;
+}
+
+.bloco-video h3 {
+    padding: 0 12px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 700;
+    color: #313F12;
+}
+
+.bloco-video p {
+    padding: 0 12px 12px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+}
+
+/* ===== SEÇÃO DO JOGO ===== */
+
+#jogo-kids {
+    background-color: #313F12;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#card-titulo-jogo-kids {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#titulo-jogo-kids {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #F9FDF3;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+#subtitulo-jogo-kids {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #f9fdf3;
+    max-width: 300px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+#card-quiz-kids {
+    background: #F9FDF3;
+    border-radius: 20px;
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 680px;
+    box-sizing: border-box;
+}
+
+#imagem-quiz-kids {
+    flex-shrink: 0;
+    width: 350px;
+}
+
+#imagem-quiz-kids img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+#cards-textos-quiz-kids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+#titulo-quiz-kids {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #313F12;
+    margin: 0;
+}
+
+#subtitulo-quiz-kids {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(13px, 1.8vw, 16px);
+    font-weight: 400;
+    color: #313F12;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#botao-jogar-quiz-kids {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A9B37A;
+    border: 2px solid #7a9a4a;
+    border-radius: 999px;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    margin-top: 16px;
+}
+
+#botao-jogar-quiz-kids:hover {
+    background-color: #7b9851;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+}
+
+#botao-jogar-quiz-kids a {
+    text-decoration: none;
+    color: #f9fdf3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== RODAPÉ ===== */
+
+#rodape {
+    background-color: #313F12;
+    color: #E8F1C9;
+    padding: 50px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+#card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+#card-links img {
+    margin-left: auto;
+}
+
+.links-rodape {
+    color: #E8F1C9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(232, 241, 201, 0.25);
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 18px;
+    white-space: nowrap;
+}
+
+.links-rodape:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+#rodape img {
+    width: auto;
+    height: 64px;
+    display: block;
+}
+
+/* para tablet migas */
+
+@media (max-width: 1024px) {
+    #card-links-navegacao {
+        gap: 40px;
+    }
+
+    .links-navegacao {
+        font-size: 18px;
+    }
+
+    #card-quiz-kids {
+        padding: 40px;
+    }
+
+    #imagem-quiz-kids {
+        width: 220px;
+    }
+}
+
+/* mobileee */
+
+@media (max-width: 600px) {
+
+    #card-logo-navegacao {
+        position: static;
+    }
+
+    #card-links-navegacao {
+        gap: 16px;
+    }
+
+    .links-navegacao {
+        font-size: 13px;
+        margin-top: 0;
+    }
+
+    #card-logo-navegacao img {
+        height: 40px;
+        transform: none;
+    }
+
+    #card-titulo-kids {
+        background: rgba(249, 253, 243, 0.6);
+        /* fundo levinho por trás do texto */
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-top: 30px;
+    }
+
+    #introducao-kids h1 {
+        font-size: 32px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #introducao-kids p {
+        font-size: 16px;
+        height: auto;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 0;
+    }
+
+
+    #introducao-kids {
+        height: auto;
+        min-height: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-position: bottom center;
+    }
+
+    #introducao-kids h1 {
+        font-size: 32px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #introducao-kids p {
+        font-size: 16px;
+        height: auto;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 0;
+    }
+
+
+
+    #espaco-titulo-videos-kids {
+        font-size: 22px;
+    }
+
+    .bloco-video {
+        width: 100%;
+    }
+
+    #card-quiz-kids {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    #imagem-quiz-kids {
+        width: 70%;
+    }
+
+    #titulo-jogo-kids {
+        font-size: 32px;
+    }
+
+    #subtitulo-jogo-kids {
+        font-size: 16px;
+    }
+
+    #rodape {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #card-links {
+        justify-content: center;
+    }
+
+    #card-links img {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+
+    /* Rodapé */
+    #rodape {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #card-links {
+        justify-content: center;
+    }
+
+    #card-links img {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}

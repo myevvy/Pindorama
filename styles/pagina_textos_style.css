@@ -290,38 +290,56 @@ body {
     cursor: pointer;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* ===== RODAPÉ ===== */
+#rodape {
     background-color: #313F12;
-    color: #FDF9F9;
-    text-align: center;
-    padding: 20px;   
-}
-
-footer #card-links {
+    color: #E8F1C9;
+    padding: 50px 36px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
 }
 
-footer #card-links a {
-    color: #FDF9F9;
+#card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+#card-links img {
+    margin-left: auto;
+}
+
+.links-rodape {
+    color: #E8F1C9;
     text-decoration: none;
-    margin-right: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(232, 241, 201, 0.25);
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 18px;
+    white-space: nowrap;
 }
 
-footer #card-links img {
-    width: 70px;
-    height: 70px;
-    margin-left: 50px;
+.links-rodape:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+    transform: translateY(-1px);
 }
 
-footer p {
-    margin-top: 50px;
-    font-size: medium;
+#rodape img {
+    width: auto;
+    height: 64px;
+    display: block;
 }
