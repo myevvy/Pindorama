@@ -14,33 +14,56 @@ body {
 
 /* --- NAVEGAÇÃO --- */
 #navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: #f7f9f2;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+/* Logo */
+#card-logo-navegacao {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 #card-logo-navegacao img {
-    height: 50px;
+    width: auto;
+    height: 60px;
+    display: block;
+    transform: translateY(-9px);
 }
 
 #card-links-navegacao {
     display: flex;
-    gap: 30px;
+    gap: clamp(30px, 8vw, 180px);
+    margin: 0 auto;
 }
 
 .links-navegacao {
     text-decoration: none;
-    color: #4a5d23;
+    color: #313F12;
     font-weight: 500;
-    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+    font-size: clamp(16px, 2vw, 23px);
 }
-
 /* --- SEÇÃO DO QUIZ --- */
 #quiz {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 120px auto;
     text-align: center;
     padding: 0 20px;
 }
@@ -147,37 +170,56 @@ body {
 
 /* --- RODAPÉ --- */
 #rodape {
-    background-color: #2d3816;
-    color: white;
-    padding: 60px 50px 30px;
-    margin-top: 80px;
+    background-color: #313F12;
+    color: #E8F1C9;
+    padding: 50px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 #card-links {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
     align-items: center;
-    position: relative;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.links-rodape {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
 }
 
 #card-links img {
-    height: 50px;
-    position: absolute;
-    right: 0;
+    margin-left: auto;
 }
 
-#rodape p {
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.8;
+.links-rodape {
+    color: #E8F1C9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(232, 241, 201, 0.25);
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 18px;
+    white-space: nowrap;
+}
+
+.links-rodape:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+#rodape img {
+    width: auto;
+    height: 64px;
+    display: block;
 }
 
 /* --- RESPONSIVIDADE --- */
