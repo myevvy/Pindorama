@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!--Plugin de Acessibilidade-->
+    <script>(function (d) {
+            var s = d.createElement("script");
+            /* Posiciona no canto inferior direito */
+            s.setAttribute("data-position", 3);
+            /* Sobe o botão em 100 pixels para não cobrir o VLibras */
+            s.setAttribute("data-offset-v", 100);
+            /* Afasta 20 pixels da lateral */
+            s.setAttribute("data-offset-h", 20);
+            /* Define o tamanho pequeno para ser mais discreto no layout */
+            s.setAttribute("data-size", "small");
+            /* Identificador da sua conta (vqbRwJTpeC) extraído da sua imagem */
+            s.setAttribute("data-account", "vqbRwJTpeC");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.head || d.body).appendChild(s);
+        })(document);
+    </script>
+    <!--CSS-->
+    <link rel="stylesheet" href="stylequiz.css">
+    <!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <nav id="navegacao"> <!--Navegação-->
+            <div id="card-logo-navegacao">
+              <a href="../index.html">
+                <img src="img/logo_escura.svg" alt="foto-da-logo">
+              </a>
+            </div>
+
+            <div id="card-links-navegacao">
+              <a class="links-navegacao" href="doe.html">Doe</a>
+              <a class="links-navegacao" href="a_floresta.html">A Floresta</a>
+              <a class="links-navegacao" href="kids.html">Kids</a>
+              <a class="links-navegacao" href="../index.html#sobre-nos">Sobre Nós</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="principal">
+        <section id="quiz">
+            <div id="titulo-e-icones">
+                <a href="kids.html">
+                    <img src="img/btVoltarKids_ICON.png" alt="icone-voltar">
+                </a>
+                <h1 id="titulo-quiz">Quiz</h1>
+                <button id="botao-som">
+                    <img src="img/BTSomKids_ICON.png" alt="icone-som">
+                </button>
+            </div>
+
+            <div id="conteudo-quiz">
+                <input type="range" name="progrecao" id="progrecao" min="0" max="5" value="1" disabled>
+                <p id="numero-pergunta">A mata atlântica é um </p>
+                <p id="texto-pergunta">Texto da Pergunta</p>
+
+                <div id="alternativas">
+                    <article class="alterantivas-quiz">
+                        <img src="img/desertoquiz.png" alt="imagem 1">
+                        <p id="texto-alternativa-1"> DESERTO </p>
+                    </article>
+
+                     <article class="alterantivas-quiz">
+                        <img src="img/cidadequiz.png" alt="imagem 2">
+                        <p id="texto-alternativa-2"> CIDADE</p>
+                    </article>
+
+                     <article class="alterantivas-quiz">
+                        <img src="img/matabiomaquiz.png" alt="imagem 3">
+                        <p id="texto-alternativa-3"> BIOMA BRASILEIRO </p>
+                    </article>
+
+                     <article class="alterantivas-quiz">
+                        <img src="img/pantal.png" alt="imagem 4">
+                        <p id="texto-alternativa-4">PANTANAL </p>
+                    </article>
+                </div>
+
+                <button type="button" id="botao-avancar">Avançar</button>
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer id="rodape"> <!--Seção do Rodapé-->
+        <div id="card-links">
+            <a class="links-rodape" href="../index.html">Home</a></li>
+            <a class="links-rodape" href="doe.html">Doe</a></li>
+            <a class="links-rodape" href="a_floresta.html">A floresta</a></li>
+            <a class="links-rodape" href="kids.html">Kids</a></li>
+            <a class="links-rodape" href="sobrenos.html">Sobre Nós</a></li>
+            <img src="img/logo_clara.svg" alt="foto-da-logo">
+        </div>
+        <p>&copy; 2026 Pindorama Todos os direitos reservados.</p
+    </footer>
+
+
+</body>
+</html>

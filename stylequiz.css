@@ -1,0 +1,198 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9f2;
+    color: #4a5d23;
+    overflow-x: hidden;
+}
+
+/* --- NAVEGAÇÃO --- */
+#navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #f7f9f2;
+}
+
+#card-logo-navegacao img {
+    height: 50px;
+}
+
+#card-links-navegacao {
+    display: flex;
+    gap: 30px;
+}
+
+.links-navegacao {
+    text-decoration: none;
+    color: #4a5d23;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* --- SEÇÃO DO QUIZ --- */
+#quiz {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#titulo-e-icones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#titulo-quiz {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #5a6b35;
+}
+
+#titulo-e-icones img {
+    width: 45px;
+}
+
+#botao-som {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Barra de Progresso */
+#progrecao {
+    width: 100%;
+    max-width: 400px;
+    height: 12px;
+    accent-color: #a4b484;
+    margin-bottom: 40px;
+    appearance: none;
+    background: #4a5d23; /* Cor do fundo da barra */
+    border-radius: 10px;
+}
+
+#numero-pergunta {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#texto-pergunta {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* --- CARDS DAS ALTERNATIVAS --- */
+#alternativas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.alterantivas-quiz {
+    background-color: white;
+    border: 3px solid #5a6b35;
+    border-radius: 25px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.alterantivas-quiz:hover {
+    transform: scale(1.02);
+    background-color: #f9fbf5;
+}
+
+.alterantivas-quiz img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.alterantivas-quiz p {
+    font-weight: 500;
+    color: #4a5d23;
+    font-size: 1.2rem;
+}
+
+/* Botão Avançar */
+#botao-avancar {
+    background-color: #b1bb94;
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* --- RODAPÉ --- */
+#rodape {
+    background-color: #2d3816;
+    color: white;
+    padding: 60px 50px 30px;
+    margin-top: 80px;
+}
+
+#card-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.links-rodape {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#card-links img {
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+
+#rodape p {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    #alternativas {
+        grid-template-columns: 1fr;
+    }
+    
+    #card-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #card-links img {
+        position: static;
+        margin-top: 20px;
+    }
+}
