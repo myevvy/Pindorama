@@ -41,10 +41,8 @@
         rel="stylesheet">
 
     <!-- Script -->
-     <script src="../script/jquery-4.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../script/jquery-4.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>   
     <script src="../script/scriptCEP.js"></script>
 </head>
 
@@ -65,21 +63,19 @@
         </nav>
     </header>
 
-
+    
     <main id="principal">
         <section id="introducao-doe"> <!--Seção de Introdução à Página Doe-->
             <h1>Doe</h1>
             <p>Encontre ONGS que também estão preocupados com o futuro da Mata Atlântica.</p>
         </section>
-
-
+        
+        
         <section id="ongs"> <!--Seção Filtros-->
             <div id="filtros">
-                <input type="search" class="input-busca" id="busca-nome-causa" name="buscaNC"
-                placeholder="Busque por nome ou causa" img src="../assets/images/icones/Lupaclara_ICON.png" alt="foto-da-lupa">
+                <input type="search" class="input-busca" id="busca-nome-causa" name="buscaNC" placeholder="Busque por nome ou causa">
                 <form action="" id="formCEP">
-                    <input type="text" class="input-busca" id="busca-cep" name="buscaCEP" placeholder="Busque por CEP"
-                    img src="../assets/images/icones/Lupaclara_ICON.png" alt="foto-do-icone-de-localizacao">
+                    <input type="text" class="input-busca" id="busca-cep" name="buscaCEP" placeholder="Busque por CEP">
 
                     <button type="submit" id="botao-buscar-cep" onclick="">Enviar</button>
 
@@ -102,22 +98,22 @@
 
             <div id="titulos-resultados">
                 <h2 id="titulo-resultados">Resultados: <p id="texto-resultados"></p> ONGS encontradas</h2>
-            
-
+                
+                <h3 id="mensagemErro"></h3>
+                
                 <form action="">
                     <select name="proximidade" id="selecao-proximidade">
-                        <option class="opcoes" value="mais-proximo">Mais próximo</option>
-                        <option class="opcoes" value="menos-proximo">Mais distante</option>
-                        <option class="opcoes" value="menos-proximo">Mais bem avaliada</option>
-                        <option class="opcoes" value="menos-proximo">Mais conhecida</option>
+                        <option class="opcoes" value="maisProximo">Mais próximo</option>
+                        <option class="opcoes" value="maisDistante">Mais distante</option>
+                        <option class="opcoes" value="avaliada">Mais bem avaliada</option>
                     </select>
                 </form>
             </div>
 
             <div id="card-ongs"> <!--Cartões das ONGS-->
-                <article class="perfil-ong" data-cep="05676-120" data-distancia="" data-estado="sp">
+                <article class="perfil-ong" data-cep="05676120" data-distancia="" data-estado="sp" data-av="5" data-conhecida="">
                     <p class="causa">Restauração</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/oncafari.jpeg" alt="foto-da-ONG">
                     <h3 class="nome-ong">Onçafari</h3>
                     <p class="descricao-ong">ONG criada com intuito de preservar a Mata Atlântica e outros biomas
@@ -126,9 +122,9 @@
                 </article>
 
 
-                <article class="perfil-ong" data-cep="06950-000" data-distancia="" data-estado="sp">
+                <article class="perfil-ong" data-cep="06950000" data-distancia="" data-estado="sp" data-av="5" data-conhecida="">
                     <p class="causa">Doação</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/fundocasa.jpeg" alt="foto-da-ONG">
                     <h3 class="nome-ong">Fundo Casa Socioambiental: Projeto Mata Atlântica Viva</h3>
                     <p class="descricao-ong">Apoiando soluções para conservação e regeneração da Mata Atlãntica</p>
@@ -138,18 +134,18 @@
                 </article>
 
 
-                <article class="perfil-ong" data-cep="11685-482" data-distancia="" data-estado="sp">
+                <article class="perfil-ong" data-cep="11685482" data-distancia="" data-estado="sp" data-av="4" data-conhecida="">
                     <p class="causa">Restauração</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/rma.jpeg" alt="foto-da-ONG">
-                    <h3 class="nome-ong">Rede de ONGs da Mata Atlãntica</h3>
+                    <h3 class="nome-ong">Rede de ONGs da Mata Atlântica</h3>
                     <p class="descricao-ong">Projeto</p>
                     <a href="https://rma.org.br/doacoes/"><button class="botao-ong">Saiba mais</button></a>
                 </article>
 
-                <article class="perfil-ong" data-cep="01311-300" data-distancia="" data-estado="sp">
+                <article class="perfil-ong" data-cep="01311300" data-distancia="" data-estado="sp" data-av="5" data-conhecida="">
                     <p class="causa">Doação</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/sosmataatlantica.jpeg" alt="foto-da-ONG">
                     <h3 class="nome-ong">SOS Mata Atlãntica</h3>
                     <p class="descricao-ong">Organização com foco em restaurar todas as áreas da Mata Atlãntica</p>
@@ -157,9 +153,9 @@
                 </article>
 
 
-                <article class="perfil-ong" data-cep="36878-000" data-distancia="" data-estado="mg">
+                <article class="perfil-ong" data-cep="36878000" data-distancia="" data-estado="mg" data-av="4.9" data-conhecida="">
                     <p class="causa">Restauração</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/iracambi.jpeg" alt="foto-da-ONG">
                     <h3 class="nome-ong">Iracambi</h3>
                     <p class="descricao-ong">ONG focada no reflorestamento da Mata Atlântica</p>
@@ -167,9 +163,9 @@
                 </article>
 
 
-                <article class="perfil-ong" data-cep="13960-000" data-distancia="" data-estado="sp">
+                <article class="perfil-ong" data-cep="13960000" data-distancia="" data-estado="sp" data-av="5" data-conhecida="">
                     <p class="causa">Doação</p>
-                    <p class="distancia"></p>
+                    <p class="statusOng"></p>
                     <img class="foto-ong" src="../assets/images/ongs/copaiba.jpeg" alt="foto-da-ONG">
                     <h3 class="nome-ong">Copaíba</h3>
                     <p class="descricao-ong">O projeto Copaíba é focado em reflorestar a Mata Atlântica</p>

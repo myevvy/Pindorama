@@ -49,8 +49,9 @@ body {
 }
 
 .links-navegacao {
+   
     text-decoration: none;
-    color: #313F12;
+    color: #333E22;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     line-height: normal;
@@ -93,16 +94,25 @@ body {
 
 /* Barra de Progresso */
 #progrecao {
+    appearance: none;
     width: 100%;
     max-width: 400px;
-    height: 12px;
+    height: 15px;
     accent-color: #a4b484;
     margin-bottom: 40px;
-    appearance: none;
-    background: #4a5d23; /* Cor do fundo da barra */
     border-radius: 10px;
+    background: transparent;
+    border: #313F12 1px solid ;
+    overflow: hidden;
 }
 
+#progrecao::-webkit-slider-thumb {
+    appearance: none;
+    width: 0px;
+    background-color: #a9b88b;
+    height: 12px;
+    box-shadow: -400px 0 0 400px #4a5d23;
+}
 #numero-pergunta {
     font-size: 14px;
     text-transform: uppercase;
@@ -123,8 +133,8 @@ body {
     margin-bottom: 40px;
 }
 
-.alterantivas-quiz {
-    background-color: white;
+.alternativas-quiz {
+    background-color: rgb(255, 254, 254);
     border: 3px solid #5a6b35;
     border-radius: 25px;
     padding: 40px 20px;
@@ -137,22 +147,39 @@ body {
     transition: transform 0.2s;
 }
 
-.alterantivas-quiz:hover {
+.alternativas-quiz:hover {
     transform: scale(1.02);
-    background-color: #f9fbf5;
+    opacity: 0.5;
 }
 
-.alterantivas-quiz img {
+.alternativas-quiz img {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.alterantivas-quiz p {
+.alternativas-quiz p {
     font-weight: 500;
     color: #4a5d23;
     font-size: 1.2rem;
+}
+
+.selecionada{
+    opacity: 0.5;
+}
+
+.certa{
+  background-color: rgb(224, 241, 224);
+}
+
+.errada{
+    border: rgb(204, 110, 110) solid 2px;
+    background-color: rgb(240, 208, 208);
+}
+
+.errada p{
+    color: rgb(204, 110, 110);
 }
 
 /* Botão Avançar */
@@ -222,19 +249,124 @@ body {
     display: block;
 }
 
+
+.mensagemQuiz {
+  position: fixed;
+  margin: 0;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: rgba(223, 255, 202, 0.719);
+  top: -30%;
+  transform: translateX(-50%);
+  transition: top 1s ease; 
+  z-index: 9999;
+}
+
+.mensagemQuiz.ativo {
+  top: 5%;
+}
+
+#popUp{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(193, 194, 194, 0.575);
+  z-index: 999;
+}
+
+#botoes{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#sairJ{
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border: 2px solid #313F12;
+    color: #313F12;
+    border-radius: 40px;
+    padding: 10px 2.2rem;
+}
+
+#jogarN{
+    appearance: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5B6F2E;
+    border: 2px solid #313F12;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 10px 2.2rem;
+}
+
+#popUp.aberto{
+  display: flex;
+}
+
+#textoPopUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 60%;
+  border-radius: 30px;
+  border: 2px solid #333E22;
+  color: #F9FDF3;
+  background-color: #A9B37A;
+}
+
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     #alternativas {
         grid-template-columns: 1fr;
     }
     
-    #card-links {
-        flex-direction: column;
-        gap: 20px;
-    }
     
+     /* Navegação */
+    #navegacao {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #card-logo-navegacao img {
+        height: 56px;
+    }
+
+    #card-links-navegacao {
+        gap: 20px; /* aplicado do mobile */
+    }
+
+    .links-navegacao {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+     #rodape {
+        margin-top: 6px;
+        padding: 30px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #card-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
     #card-links img {
-        position: static;
-        margin-top: 20px;
+        order: -1;
+        width: 100%;
+        margin-bottom: 12px;
     }
 }

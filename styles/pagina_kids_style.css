@@ -1,3 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../assets/images/icones/folha1.gif'), auto;
+}
+
+
+*:active {
+  cursor: url('../assets/images/icones/folha1.gif'), pointer !important;
+}
+
+a, button, input, select, textarea,
+a:hover, button:hover, a:active, button:active {
+  cursor: url('../assets/images/icones/folha1.gif'), pointer !important;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -15,80 +32,91 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.747);
-    box-shadow: 0 4px 4px 0 rgba(252, 241, 241, 0.1);
-    box-sizing: border-box;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.10);
 }
 
+/* Logo */
 #card-logo-navegacao {
-    position: absolute;
-    left: 60px;
+    position: relative;
     display: flex;
-    height: 100%;
     align-items: center;
 }
 
 #card-logo-navegacao img {
     width: auto;
-    height: 80px;
+    height: 60px;
     display: block;
     transform: translateY(-9px);
 }
 
 #card-links-navegacao {
     display: flex;
-    gap: 140px;
+    gap: clamp(30px, 8vw, 180px);
     margin: 0 auto;
 }
 
 .links-navegacao {
+   
     text-decoration: none;
     color: #313F12;
     font-weight: 500;
+    font-family: "Poppins", sans-serif;
     line-height: normal;
     background: none;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: auto;
+    font-size: clamp(16px, 2vw, 23px);
 }
 
+
 #introducao-kids {
-    background-image: url(../assets/images/backgrounds/background_KIDS.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: lightgray;
     width: 100%;
-    height: 830px;
-    margin-top: 0px;
-    padding-top: 120px;
-    z-index: 1;
-    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:
+url("../assets/images/backgrounds/background_KIDS.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+}
+
+#card-titulo-kids {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 30px;
+    background-color: transparent !important;
+    transform: translateY(-150px);
 }
 
 #introducao-kids h1 {
     margin-top: 140px;
     margin-bottom: 10px;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: 3px;
     text-align: center;
     color: #313F12;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 
 #introducao-kids p {
     font-size: 24px;
+    padding: 0 10px;
     font-weight: 420;
     line-height: normal;
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
     color: #313F12;
-    font-family: 'Poppins', sans-serif;
+    
 }
 
 /* ===== SEÇÃO DOS VÍDEOS ===== */
@@ -336,20 +364,23 @@ body {
 /* para tablet migas */
 
 @media (max-width: 1024px) {
+    #navegacao {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #card-logo-navegacao img {
+        height: 56px;
+    }
+
     #card-links-navegacao {
-        gap: 40px;
+        gap: 20px; /* aplicado do mobile */
     }
 
     .links-navegacao {
-        font-size: 18px;
-    }
-
-    #card-quiz-kids {
-        padding: 40px;
-    }
-
-    #imagem-quiz-kids {
-        width: 220px;
+        font-size: 14px;
+        margin-top: 6px;
     }
 }
 
@@ -357,22 +388,23 @@ body {
 
 @media (max-width: 600px) {
 
-    #card-logo-navegacao {
-        position: static;
-    }
-
-    #card-links-navegacao {
-        gap: 16px;
-    }
-
-    .links-navegacao {
-        font-size: 13px;
-        margin-top: 0;
+    #navegacao {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     #card-logo-navegacao img {
-        height: 40px;
-        transform: none;
+        height: 56px;
+    }
+
+    #card-links-navegacao {
+        gap: 20px; /* aplicado do mobile */
+    }
+
+    .links-navegacao {
+        font-size: 14px;
+        margin-top: 6px;
     }
 
     #card-titulo-kids {
@@ -393,33 +425,14 @@ body {
         font-size: 16px;
         height: auto;
         max-width: 100%;
-        padding: 0;
+        padding: 0 30px;
         box-sizing: border-box;
         margin-bottom: 0;
     }
-
 
     #introducao-kids {
-        height: auto;
-        min-height: 300px;
-        padding-top: 60px;
-        padding-bottom: 40px;
-        background-position: bottom center;
-    }
-
-    #introducao-kids h1 {
-        font-size: 32px;
-        margin-top: 0;
-        text-align: center;
-    }
-
-    #introducao-kids p {
-        font-size: 16px;
-        height: auto;
-        max-width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-        margin-bottom: 0;
+        background-position: -200px;
+        background-repeat: no-repeat;
     }
 
 
@@ -465,17 +478,94 @@ body {
 
 
     /* Rodapé */
-    #rodape {
+   #rodape {
+        margin-top: 6px;
+        padding: 30px 20px;
         justify-content: center;
         text-align: center;
     }
 
     #card-links {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
     }
 
     #card-links img {
-        margin-left: 0;
-        margin-top: 12px;
+        order: -1;
+        width: 100%;
+        margin-bottom: 12px;
     }
+}
+
+/* ================== ANIMAÇÕES ================== */
+
+/* animação base */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NAV aparecendo um por um */
+.links-navegacao {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.links-navegacao:nth-child(1) { animation-delay: 0.2s; }
+.links-navegacao:nth-child(2) { animation-delay: 0.4s; }
+.links-navegacao:nth-child(3) { animation-delay: 0.6s; }
+.links-navegacao:nth-child(4) { animation-delay: 0.8s; }
+
+
+/* TÍTULO HOME */
+#titulo-home {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+
+/* EFEITO DIGITANDO */
+
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#subtitulo-home {
+    white-space: normal;   /* permite quebra */
+    width: 100%;
+
+    opacity: 0;
+    animation: fadeSlideUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

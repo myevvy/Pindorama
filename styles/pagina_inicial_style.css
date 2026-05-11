@@ -1,6 +1,19 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    cursor: url('../assets/images/icones/folha1.gif'), auto;
+    font-family: "Poppins", sans-serif;
+}
+
+
+*:active {
+  cursor: url('../assets/images/icones/folha1.gif'), pointer !important;
+}
+
+a, button, input, select, textarea,
+a:hover, button:hover, a:active, button:active {
+  cursor: url('../assets/images/icones/folha1.gif'), pointer !important;
 }
 
 body {

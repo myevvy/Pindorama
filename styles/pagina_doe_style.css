@@ -256,6 +256,17 @@ url("../assets/images/backgrounds/background_Doe.jpg");
     color: #313F12;
 }
 
+#mensagemErro{
+    opacity: 0;
+    color: rgba(83, 103, 39, 0.733);
+    font-weight: 500;
+    transition: opacity 1s ease;
+}
+
+#mensagemErro.mostrar{
+    opacity: 1;
+}
+
 
 /* SELECTS *//* SELECTS */
 #opcoesCausas,
@@ -370,7 +381,7 @@ url("../assets/images/backgrounds/background_Doe.jpg");
     font-family: "Poppins", sans-serif;
 }
 
-.distancia {
+.statusOng {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -673,4 +684,3 @@ url("../assets/images/backgrounds/background_Doe.jpg");
 .links-navegacao:nth-child(2) { animation-delay: 0.4s; }
 .links-navegacao:nth-child(3) { animation-delay: 0.6s; }
 .links-navegacao:nth-child(4) { animation-delay: 0.8s; }
-
