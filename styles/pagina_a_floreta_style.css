@@ -14,7 +14,6 @@ a, button, input, select, textarea,
 a:hover, button:hover, a:active, button:active {
     cursor: url('../assets/images/icones/folha1.gif'), pointer !important;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f7f9f2;
@@ -24,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- NAVEGAÇÃO (HEADER) --- */
+/* --- NAVEGAÇÃO --- */
 #navegacao {
     position: fixed;
     top: 0;
@@ -61,6 +60,7 @@ body {
 }
 
 .links-navegacao {
+   
     text-decoration: none;
     color: #313F12;
     font-weight: 500;
@@ -73,8 +73,7 @@ body {
     font-size: clamp(16px, 2vw, 23px);
 }
 
-
-/* --- SEÇÃO HERO (HOME) --- */
+/* --- SEÇÃO HERO (TOPO COM AQUARELA) --- */
 #home {
     background-image: url('../assets/images/backgrounds/background_Afloresta.jpg');
     background-size: cover;
@@ -92,61 +91,63 @@ body {
 #titulo {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0 20px;
-    z-index: 2;
 }
-
 #titulo-principal {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: 3rem;
     text-transform: uppercase;
     color: #4a5d23;
     letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 #subtitulo-topo {
-    font-size: clamp(1rem, 1.2vw, 1.3rem);
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
-/* Barra de Pesquisa */
-#pesquisa_texto {
-    width: min(90%, 500px);
-    padding: 15px 25px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-#selecione-recentes {
+#pesquisa {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 20px;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background-color: #a4b484;
+}
+
+/* Barra de Pesquisa Estilizada */
+#pesquisa_texto {
+    width: 30em;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     color: #313F12;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+}
+
+#pesquisa_texto::placeholder {
+    color: #4a5d23;
+    font-weight: 600;
 }
 
 /* --- FILTROS --- */
 #todos-os-textos {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
-#todos-os-textos > div:first-child {
+#botoes-filtro{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     background: #fff;
     width: fit-content;
@@ -157,7 +158,7 @@ body {
 }
 
 .filtros {
-    padding: 12px 25px;
+    padding: 10px 30px;
     border: none;
     background: none;
     cursor: pointer;
@@ -165,60 +166,63 @@ body {
     color: #a4b484;
     transition: 0.3s;
 }
+    
+/* .filtros:hover {
+    background-color: #ffffff;
+    color: #a4b484;
+} */
 
-.filtros.ativo, .filtros:hover {
+.selecionado{
     background-color: #a4b484;
     color: white;
 }
 
-/* --- RESULTADOS E GRID --- */
+/* --- RESULTADOS E SELECT --- */
 #texto-resultados {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
-.blocos-textos {
+#resultados {
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- GRID DE CARDS (BLOCOS DE TEXTOS) --- */
+#blocos-textos {
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .blocos {
     background-color: #f0f4e9;
     padding: 30px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #dce4d0;
-    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    transition: transform 0.3s;
 }
 
 .blocos:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-}
-.noticias {
-    text-decoration: none;
-    font-weight: 600;
-    background-color: #313F12;
-    color: #a4b484;
-    border-radius: 30px;
-    line-height: 70px !important;
-    padding: 7px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* Estilos das Classificações */
 .classificacao-fauna, .classificacao-flora, .classificacao-rios {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 5px 12px;
-    border-radius: 30px;
     display: inline-block;
+    text-align: center;
+    width: 70px;
+    padding: 4px 12px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
@@ -226,54 +230,109 @@ body {
 .classificacao-flora { background-color: #e6f7ef; color: #2ecc71; }
 .classificacao-rios { background-color: #e6f0f7; color: #3498db; }
 
-/* --- RODAPÉ (FOOTER) --- */
+.titulos-blocos {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.textinhos {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.noticias {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #4a5d23;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.noticias::after {
+    content: '→';
+    margin-left: 5px;
+}
+
+/* --- RODAPÉ --- */
 #rodape {
     background-color: #313F12;
     color: #E8F1C9;
-    padding: 50px 5%;
+    padding: 50px 36px;
     display: flex;
-    flex-direction: column; /* Mobile first: empilhado */
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
     border-top: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 #card-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+#card-links img {
+    margin-left: auto;
 }
 
 .links-rodape {
     color: #E8F1C9;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(232, 241, 201, 0.2);
-    border-radius: 12px;
-    padding: 10px 20px;
-    transition: 0.3s;
+    border: 1px solid rgba(232, 241, 201, 0.25);
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 18px;
+    white-space: nowrap;
 }
 
 .links-rodape:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+    transform: translateY(-1px);
 }
 
 #rodape img {
-    height: 50px;
     width: auto;
+    height: 64px;
+    display: block;
 }
 
-/* --- MEDIA QUERIES --- */
 
-/* Ajustes para Desktop */
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    #blocos-textos {
+        grid-template-columns: 1fr 1fr;
+    }
 
-/* Ajustes para Mobile */
+}
+
 @media (max-width: 600px) {
-   #navegacao {
+    #blocos-textos {
+        grid-template-columns: 1fr;
+    }
+    #titulo-principal { font-size: 2rem; }
+    #pesquisa { 
+        width: 60%; 
+        margin-top: -5%;
+    
+    }
+
+    #navegacao {
         padding: 12px 20px;
         flex-wrap: wrap;
         gap: 10px;
@@ -285,15 +344,21 @@ body {
 
     #card-links-navegacao {
         gap: 20px; /* aplicado do mobile */
+        
     }
 
     .links-navegacao {
         font-size: 14px;
         margin-top: 6px;
+        color: #313F12;
     }
 
     #home {
         height: 80vh;
+    }
+    
+    #titulo {
+        top: 40%;
     }
 
     #rodape {
@@ -316,6 +381,9 @@ body {
         margin-bottom: 12px;
     }
 }
+}
+
+
 
 /* ================== ANIMAÇÕES ================== */
 
