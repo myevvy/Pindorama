@@ -111,6 +111,7 @@ let fases = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+
   const perguntasDiv = document.querySelectorAll(".alternativas-quiz");
   const nivelTexto = document.getElementById("numero-pergunta");
   const tituloPergunta = document.getElementById("texto-pergunta");
@@ -123,6 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const tituloPop = document.getElementById("tituloPopUp");
   const subPop = document.getElementById("subTituloPop");
   const btnJogar = document.getElementById("jogarN");
+  const selecionouSom = document.getElementById("selecionouSom");
+  const acertouSom = document.getElementById("acertouSom");
+  const errouSom = document.getElementById("errouSom");
+  const ganhouSom = document.getElementById("ganhouSom");
+  const perdeuSom = document.getElementById("perdeuSom");
   progresso.max = fases.length;
 
   function atualizarFase() {
@@ -183,17 +189,18 @@ document.addEventListener("DOMContentLoaded", () => {
     popUp.classList.add("aberto");
     tituloPop.textContent = titulo;
     subPop.textContent = subtitulo;
+    document.body.style.overflow = "hidden";
   }
 
   function carregarFase() {
     if (nivel >= fases.length) {
       abrirPop("GANHOU", "Parabéns, você finalizou o quiz!");
+      ganhouSom.play();
       nivel = fases.length - 1;
       return;
     } else if (erros >= 3) {
       abrirPop("PERDEU", "Tente novamente!");
       nivel = 0;
-      erros = 0;
     }
 
     limparSelecao();
@@ -208,11 +215,12 @@ document.addEventListener("DOMContentLoaded", () => {
     divSelecionada.classList.remove("selecionada");
     divSelecionada.classList.add("certa");
     nivel++;
+    acertouSom.play();
     salvarProgresso();
 
     setTimeout(() => {
       carregarFase();
-    }, 1200);
+    }, 1000);
   }
 
   function respostaErrada() {
@@ -220,12 +228,14 @@ document.addEventListener("DOMContentLoaded", () => {
     divSelecionada.classList.remove("selecionada");
     divSelecionada.classList.add("errada");
     mostrarMensagem("Alternativa incorreta!");
+    errouSom.currentTime = 0;
+    errouSom.play();
     salvarProgresso();
 
     if (erros >= 3) {
       abrirPop("PERDEU", "Tente novamente!");
+      perdeuSom.play();
       nivel = 0;
-      erros = 0;
       setTimeout(() => {
         salvarProgresso();
         carregarFase();
@@ -238,9 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
       limparSelecao();
 
       respostaUser = Number(div.dataset.numpergunta);
-
       divSelecionada = div;
-
+      selecionouSom.play();
       div.classList.add("selecionada");
     });
   });
@@ -264,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
     salvarProgresso();
 
     popUp.classList.remove("aberto");
-
+    document.body.style.overflow = "";
     carregarFase();
   });
 

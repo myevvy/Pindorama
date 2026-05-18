@@ -148,7 +148,6 @@ body {
 
 .alternativas-quiz:hover {
   transform: scale(1.02);
-  opacity: 0.5;
 }
 
 .alternativas-quiz img {
@@ -192,8 +191,12 @@ body {
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
+#botao-avancar:hover {
+  background-color: #949e75;
+}
 /* --- RODAPÉ --- */
 #rodape {
   background-color: #313f12;
@@ -281,7 +284,7 @@ body {
   z-index: 999;
 }
 
-#botoes-controle {
+#botoes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,12 +383,8 @@ body {
     width: 80%;
   }
 
-  #botoes-controle {
+  #botoes {
     flex-direction: column;
-  }
-
-  #botoes-controle a,
-  #botoes-controle button {
-    width: 80%;
+    gap: 1rem;
   }
 }
