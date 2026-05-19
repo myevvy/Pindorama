@@ -260,7 +260,6 @@ body {
   left: 50%;
   padding: 3rem;
   border-radius: 20px;
-  background-color: rgba(223, 255, 202, 0.719);
   top: -30%;
   transform: translateX(-50%);
   transition: top 1s ease;
@@ -269,6 +268,24 @@ body {
 
 .mensagemQuiz.ativo {
   top: 5%;
+}
+
+.mensagemQuiz.msgNeutra {
+  background-color: rgba(230, 230, 230, 0.959);
+  border: 2px solid black;
+  color: black;
+}
+
+.mensagemQuiz.msgErrada {
+  border: rgb(204, 110, 110) solid 2px;
+  background-color: rgb(240, 208, 208);
+  color: rgb(204, 110, 110);
+}
+
+.mensagemQuiz.msgCerta {
+  background-color: rgb(224, 241, 224);
+  border: 2px solid #5a6b35;
+  color: #4a5d23;
 }
 
 #popUp {
@@ -381,10 +398,17 @@ body {
 
   #textoPopUp {
     width: 80%;
+    padding: 0 1rem;
   }
 
   #botoes {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .mensagemQuiz {
+    text-align: center;
+    width: 70%;
+    font-size: 20px;
   }
 }
