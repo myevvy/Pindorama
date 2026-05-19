@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         som.muted = true;
       });
       botaoSom.classList.remove("somAtivo");
-      imagemSom.src = "../assets/images/icones/sem-som.png";
+      imagemSom.src = "../assets/images/icones/sem_som.png";
     } else {
       sons.forEach((som) => {
         som.muted = false;

@@ -24,8 +24,10 @@ body {
   align-items: center;
   width: 100%;
   padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.425);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
 }
 
 /* Logo */
@@ -89,6 +91,10 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+#botao-som img{
+  width: 30px;
 }
 
 /* Barra de Progresso */
