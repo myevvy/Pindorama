@@ -389,6 +389,24 @@ body {
   display: block;
 }
 
+#msgLink{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15%;
+  transition: all 1s ease;
+  background-color: #fdf9f9;
+  border: 2px solid #313f12;
+  border-radius: 10px;
+  color: #313f12;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+#msgLink.aberta{
+  bottom: 5%;
+}
+
 /* ===== BREAKPOINTS ===== */
 
 /* Tablet grande / desktop pequeno */
