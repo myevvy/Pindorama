@@ -111,7 +111,6 @@ let fases = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const perguntasDiv = document.querySelectorAll(".alternativas-quiz");
   const nivelTexto = document.getElementById("numero-pergunta");
   const tituloPergunta = document.getElementById("texto-pergunta");
@@ -129,7 +128,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const errouSom = document.getElementById("errouSom");
   const ganhouSom = document.getElementById("ganhouSom");
   const perdeuSom = document.getElementById("perdeuSom");
+  const botaoSom = document.getElementById("botao-som");
+  let imagemSom = document.getElementById("imagemSom");
   progresso.max = fases.length;
+
+  const sons = [selecionouSom, acertouSom, errouSom, ganhouSom, perdeuSom];
+
+  botaoSom.addEventListener("click", () => {
+    if (botaoSom.classList.contains("somAtivo")) {
+      sons.forEach((som) => {
+        som.muted = true;
+      });
+      botaoSom.classList.remove("somAtivo");
+      imagemSom.src = "../assets/images/icones/sem_som.png";
+    } else {
+      sons.forEach((som) => {
+        som.muted = false;
+      });
+      botaoSom.classList.add("somAtivo");
+      imagemSom.src = "../assets/images/icones/BTSomKids_ICON.png";
+    }
+  });
 
   function atualizarFase() {
     nivelTexto.textContent = `Pergunta ${nivel + 1}`;
@@ -160,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function limparFeedback() {
+  function limparClassificacao() {
     perguntasDiv.forEach((div) => {
       div.classList.remove("certa");
       div.classList.remove("errada");
@@ -168,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function resetarSelecao() {
-    respostaUser = undefined;
+    respostaUser = null;
     divSelecionada = null;
   }
 
@@ -177,8 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("erros", erros);
   }
 
-  function mostrarMensagem(mensagem) {
+  function mostrarMensagem(mensagem, tipo) {
     textoMensagem.textContent = mensagem;
+    textoMensagem.classList.remove("msgErrada", "msgNeutra", "msgCerta");
+    textoMensagem.classList.add(tipo);
     textoMensagem.classList.add("ativo");
     setTimeout(() => {
       textoMensagem.classList.remove("ativo");
@@ -204,34 +225,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     limparSelecao();
-    limparFeedback();
+    limparClassificacao();
     resetarSelecao();
     atualizarFase();
     renderizarProgresso();
+
+    if (divsErradas.length > 0) {
+      divsErradas.forEach((divErrada) => {
+        let divE = document.querySelector(`[data-numpergunta="${divErrada}"]`);
+        divE.classList.add("errada");
+        console.log(divE);
+      });
+    }
+  }
+
+  function limpaErradas(){
+    localStorage.removeItem("erradas");
+    divsErradas = [];
   }
 
   function respostaCorreta() {
-    mostrarMensagem("Alternativa correta!");
-    divSelecionada.classList.remove("selecionada");
+    mostrarMensagem("Alternativa correta!", "msgCerta");
+    limparSelecao();
     divSelecionada.classList.add("certa");
     nivel++;
     acertouSom.play();
     salvarProgresso();
-
+    limpaErradas();
+    
     setTimeout(() => {
       carregarFase();
     }, 1000);
   }
 
+  let divsErradas = JSON.parse(localStorage.getItem("erradas")) || [];
+
   function respostaErrada() {
     erros++;
-    divSelecionada.classList.remove("selecionada");
+    limparSelecao();
     divSelecionada.classList.add("errada");
-    mostrarMensagem("Alternativa incorreta!");
+    mostrarMensagem("Alternativa incorreta!", "msgErrada");
     errouSom.currentTime = 0;
     errouSom.play();
     salvarProgresso();
 
+    // ARMAZENA ERRADA
+    if (!divsErradas.includes(divSelecionada.dataset.numpergunta)) {
+      divsErradas.push(divSelecionada.dataset.numpergunta);
+    }
+    localStorage.setItem("erradas", JSON.stringify(divsErradas));
+
+    // CONFERE ERRO
     if (erros >= 3) {
       abrirPop("PERDEU", "Tente novamente!");
       perdeuSom.play();
@@ -255,8 +299,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   botaoAvancar.addEventListener("click", () => {
-    if (respostaUser === undefined) {
-      mostrarMensagem("Escolha uma alternativa");
+    if (respostaUser === null) {
+      mostrarMensagem("Escolha uma alternativa", "msgNeutra");
       return;
     }
 
@@ -265,6 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       respostaErrada();
     }
+    resetarSelecao();
   });
 
   btnJogar.addEventListener("click", () => {
@@ -274,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popUp.classList.remove("aberto");
     document.body.style.overflow = "";
+    limpaErradas();
     carregarFase();
   });
 
